@@ -1,3 +1,12 @@
 .navbar-container {
-  background-image: linear-gradient(-135deg, #ff690f 0%, #e8381b 100%);
+  background-image: linear-gradient(-135deg, #e8381b 0%, #ff690f 100%);
+  width: 1440px;
+  height: 45px;
+}
+
+.tours {
+  font-family: HelveticaNeue-Bold;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
 }
