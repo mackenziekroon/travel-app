@@ -4,6 +4,11 @@ body {
   padding: 0;
 }
 
+@font-face {
+  font-family: "forza-black";
+  src: url("solution/assets/forza-black.woff2") format("woff2");
+}
+
 .page-container {
   width: 1440px;
   height: 2076px;
@@ -31,4 +36,15 @@ body {
   position: absolute;
   left: 373px;
   top: 17px;
+}
+
+.heading {
+  font-family: Forza-Black;
+  font-size: 44px;
+  color: #131a1f;
+  text-align: left;
+  line-height: 56px;
+  position: absolute;
+  top: 93px;
+  left: 220px;
 }
