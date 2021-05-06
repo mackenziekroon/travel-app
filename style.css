@@ -118,3 +118,15 @@ body {
   top: 181px;
   left: 948px;
 }
+
+/* .search-btn {
+  color: white;
+} */
+
+.destination-img {
+  width: 782px;
+  height: 431px;
+  position: absolute;
+  top: 242px;
+  left: 220px;
+}
