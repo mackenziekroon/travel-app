@@ -1,6 +1,8 @@
-/* .body {
-  margin: 0px !important;
-} */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .page-container {
   width: 1440px;
@@ -13,14 +15,13 @@
   height: 45px;
   display: flex;
   justify-content: flex-start;
-  top: 0;
   align-items: center;
 }
 
 .kayak-logo {
   position: absolute;
   left: 220px;
-  top: 17px;
+  top: 11px;
 }
 
 .tours {

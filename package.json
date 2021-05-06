@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mackenziekroon/kayak/issues"
   },
-  "homepage": "https://github.com/mackenziekroon/kayak#readme"
+  "homepage": "https://github.com/mackenziekroon/kayak#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
