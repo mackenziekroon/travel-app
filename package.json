@@ -1,0 +1,20 @@
+{
+  "name": "cambridge-ui-intern-project-2021",
+  "version": "1.0.0",
+  "description": "Create a page that allows users to select a destination from a form. Selectable destinations are filtered from a list of categories based on the season chosen by the user. Once selected, the destination is displayed below the form.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackenziekroon/kayak.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mackenziekroon/kayak/issues"
+  },
+  "homepage": "https://github.com/mackenziekroon/kayak#readme"
+}
