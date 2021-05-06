@@ -130,3 +130,16 @@ body {
   top: 242px;
   left: 220px;
 }
+
+.destination-title {
+  font-family: Forza-Black;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: left;
+  line-height: 20px;
+  position: absolute;
+  top: 609px;
+  left: 251px;
+  width: 347px;
+  height: 40px;
+}
