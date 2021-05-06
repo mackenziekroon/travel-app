@@ -48,3 +48,67 @@ body {
   top: 93px;
   left: 220px;
 }
+
+/* .form-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: lightblue;
+  top: 181px;
+  left: 200px;
+  right: 438px;
+} */
+
+.season-form {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  color: #131a1f;
+  text-align: left;
+  background: #f1f4f7;
+  border-radius: 2px;
+  position: absolute;
+  height: 54px;
+  width: 239px;
+  top: 181px;
+  left: 220px;
+}
+
+.season-text {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  color: #131a1f;
+  text-align: left;
+  height: 16px;
+  width: 215px;
+  position: absolute;
+  top: 200px;
+  left: 232px;
+}
+
+.category-form {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  color: #131a1f;
+  text-align: left;
+  background: #f1f4f7;
+  border-radius: 2px;
+  position: absolute;
+  height: 54px;
+  width: 239px;
+  top: 181px;
+  left: 463px;
+}
+
+.destination-form {
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  color: #131a1f;
+  text-align: left;
+  background: #f1f4f7;
+  border-radius: 2px;
+  position: absolute;
+  height: 54px;
+  width: 239px;
+  top: 181px;
+  left: 705px;
+}
