@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+
     <title>Mackenzie's Kayak Intern app</title>
   </head>
 
@@ -16,19 +17,27 @@
       </div>
       <div class="lower-container">
         <div class="heading">All the best tours, all in one place.</div>
-        <div class="form-container">
-          <div class="season-form"></div>
-          <div class="season-text">Season</div>
-          <div class="category-form"></div>
-          <div class="category-text">Category</div>
-          <div class="destination-form"></div>
-          <div class="destination-text">Destination</div>
-          <div class="btn-container">
-            <div class="search-btn">
-              <img src="solution/assets/search-icon.svg" alt="search-button" />
-            </div>
+        <!-- <div class="form-container"> -->
+        <div class="season-form"></div>
+        <!-- <div class="season-text">Season</div> -->
+        <form class="season-text">
+          <select id="season-form">
+            <option>Autumn</option>
+            <option>Spring</option>
+            <option>Summer</option>
+            <option>Winter</option>
+          </select>
+        </form>
+        <div class="category-form"></div>
+        <div class="category-text">Category</div>
+        <div class="destination-form"></div>
+        <div class="destination-text">Destination</div>
+        <div class="btn-container">
+          <div class="search-btn">
+            <img src="solution/assets/search-icon.svg" alt="search-button" />
           </div>
         </div>
+        <!-- </div> -->
         <div>
           <img
             class="destination-img"
@@ -41,7 +50,7 @@
       </div>
     </div>
 
-    <!-- <script type="text/javascript" src="data.js"></script>
-    <script type="text/javascript" src="script.js"></script> -->
+    <script type="text/javascript" src="solution/assets/tour-data.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
