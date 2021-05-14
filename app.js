@@ -4,7 +4,7 @@ let seasonNames = Object.keys(tourData.seasonCategories);
 
 for (let i = 0; i < seasonNames.length; i++) {
   let seasons = document.createElement("option");
-  seasons.innerText = seasonNames[i];
+  seasons.innerText = seasonNames[i][0].toUpperCase() + seasonNames[i].slice(1);
   let seasonForm = document.getElementsByClassName("seasons-form")[0];
   seasonForm.appendChild(seasons);
 }
