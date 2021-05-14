@@ -9,6 +9,14 @@ body {
   src: url("solution/assets/forza-black.woff2") format("woff2");
 }
 
+select {
+  background: #f1f4f7;
+  border-radius: 2px;
+  width: 239px;
+  height: 54px;
+  border: none;
+}
+
 .page-container {
   width: 1440px;
   height: 2076px;
@@ -76,9 +84,30 @@ body {
   text-align: left;
   height: 16px;
   width: 215px;
-  position: absolute;
+  /* position: absolute;
   top: 200px;
-  left: 232px;
+  left: 232px; */
+}
+
+select {
+  /* display: none; */
+  position: absolute;
+  background-color: yellow;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+option {
+  background-color: lightcoral !important;
+}
+
+#season-select {
+  /* /* position: absolute; */
+  top: 181px;
+  left: 220px;
+  position: relative;
+  display: inline-block;
 }
 
 .category-form {
