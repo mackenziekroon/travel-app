@@ -10,17 +10,21 @@ for (let i = 0; i < seasonNames.length; i++) {
   // Assigns the inner text of the new element to the current season name
   // Capitalizes the first letter of the season
   seasons.innerText = seasonNames[i][0].toUpperCase() + seasonNames[i].slice(1);
+  // Assigns the season name as the value
+  seasons.value = seasonNames[i][0].toUpperCase() + seasonNames[i].slice(1);
   // Grabs the season form element
   let seasonForm = document.getElementsByClassName("seasons-form")[0];
   // Appends the newly created option elements to the season form
   seasonForm.appendChild(seasons);
 }
 
-season = season[0].toLowerCase() + season.slice(1);
-// console.log(season);
+function selectSeason() {
+  let currentSeason = document.getElementsByClassName("seasons-form")[0];
+  selectedSeason = currentSeason.options[currentSeason.selectedIndex].text;
+  console.log("inside:", selectedSeason);
+}
 
 // Display the categories that match the selected season
-
 let category = tourData.seasonCategories[season];
 // console.log("category: ", category);
 
