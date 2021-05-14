@@ -1,18 +1,20 @@
 console.log(tourData);
 
+// Grabs the 4 season names from the data set and puts them into an array
 let seasonNames = Object.keys(tourData.seasonCategories);
 
+// Loops through the array of season names
 for (let i = 0; i < seasonNames.length; i++) {
+  // Creates a new option element
   let seasons = document.createElement("option");
+  // Assigns the inner text of the new element to the current season name
+  // Capitalizes the first letter of the season
   seasons.innerText = seasonNames[i][0].toUpperCase() + seasonNames[i].slice(1);
+  // Grabs the season form element
   let seasonForm = document.getElementsByClassName("seasons-form")[0];
+  // Appends the newly created option elements to the season form
   seasonForm.appendChild(seasons);
 }
-// seasons.map((season) => document.createElement("option"));
-
-// console.log("SEASONS: ", seasons);
-
-let season = "Autumn";
 
 season = season[0].toLowerCase() + season.slice(1);
 // console.log(season);
