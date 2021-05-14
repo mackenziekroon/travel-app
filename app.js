@@ -18,18 +18,32 @@ for (let i = 0; i < seasonNames.length; i++) {
   seasonForm.appendChild(seasons);
 }
 
-function selectSeason() {
+const selectSeason = () => {
   let currentSeason = document.getElementsByClassName("seasons-form")[0];
-  selectedSeason = currentSeason.options[currentSeason.selectedIndex].text;
-  console.log("inside:", selectedSeason);
-}
+  let selectedSeason = currentSeason.options[currentSeason.selectedIndex].text;
+  console.log("selected season:", selectedSeason);
+  selectedSeason = selectedSeason.toLowerCase();
+  let category = tourData.seasonCategories[selectedSeason];
+  console.log("category", category);
+  selectCategory();
+  // return category;
+};
+
+const selectCategory = () => {
+  let category = selectSeason();
+
+  for (let i = 0; i < category.length; i++) {
+    let categories = document.createElement("option");
+    categories.innerText = category[i][0].toUpperCase() + category[i].slice(1);
+    categories.value = category[i][0].toUpperCase() + category[i].slice(1);
+    let categoryForm = document.getElementsByClassName("categories-form")[0];
+    categoryForm.appendChild(categories);
+  }
+};
 
 // Display the categories that match the selected season
-let category = tourData.seasonCategories[season];
-// console.log("category: ", category);
 
-// temp - represents the selected category
-let categorySelection = category[0];
+// console.log("category", category);
 
 // Display all destinations that match the selected category
 let destinations = tourData.destinations;
