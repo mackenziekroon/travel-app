@@ -1,4 +1,4 @@
-console.log(tourData);
+// console.log(tourData);
 
 // Grabs the 4 season names from the data set and puts them into an array
 let seasonNames = Object.keys(tourData.seasonCategories);
@@ -21,27 +21,39 @@ for (let i = 0; i < seasonNames.length; i++) {
 const selectSeason = () => {
   let currentSeason = document.getElementsByClassName("seasons-form")[0];
   let selectedSeason = currentSeason.options[currentSeason.selectedIndex].text;
-  console.log("selected season:", selectedSeason);
+  // console.log("selected season:", selectedSeason);
   selectedSeason = selectedSeason.toLowerCase();
-  let category = tourData.seasonCategories[selectedSeason];
-  console.log("category", category);
-  selectCategory();
+  let categoryOptions = tourData.seasonCategories[selectedSeason];
+  // console.log("category", category);
+  return selectCategory(categoryOptions);
   // return category;
 };
 
-const selectCategory = () => {
-  let category = selectSeason();
+const selectCategory = (e) => {
+  let category = e;
+  let categoryForm = document.getElementsByClassName("categories-form")[0];
+  let singleCategory = document.getElementsByClassName("category");
+  console.log("single category", singleCategory);
+  // remove children that were previously created
+  if (singleCategory.length) {
+    for (let i = 0; i < singleCategory.length; i++) {
+      categoryForm.removeChild(singleCategory[i]);
+    }
+  }
 
   for (let i = 0; i < category.length; i++) {
+    console.log("CATEGORY:", category[i]);
     let categories = document.createElement("option");
+    let categoryForm = document.getElementsByClassName("categories-form")[0];
+
+    // add class name
+    categories.classList.add("category");
+    // Display the categories that match the selected season
     categories.innerText = category[i][0].toUpperCase() + category[i].slice(1);
     categories.value = category[i][0].toUpperCase() + category[i].slice(1);
-    let categoryForm = document.getElementsByClassName("categories-form")[0];
     categoryForm.appendChild(categories);
   }
 };
-
-// Display the categories that match the selected season
 
 // console.log("category", category);
 
