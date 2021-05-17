@@ -111,6 +111,20 @@ const selectDestination = () => {
   let totalDestination = destinationOptions.filter(
     (destinationOptions) => destinationOptions.name === selectedDestination
   )[0];
+  console.log("final destination", totalDestination);
+  return searchButton(totalDestination);
+};
+
+const searchButton = (destination) => {
+  // Destination Images
+  let destinationInfo = destination;
+  let imgNum = destinationInfo.id;
+  let relativePath = "solution/assets/8375.jpg";
+  let destinationImage = document.createElement("img");
+  destinationImage.src = `solution/assets/${imgNum}.jpg`;
+  destinationImage.classList = "destination-img";
+  let imageContainer = document.getElementsByClassName("img-container")[0];
+  imageContainer.appendChild(destinationImage);
 };
 
 // console.log("category", category);
