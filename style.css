@@ -14,7 +14,17 @@ select {
   border-radius: 2px;
   width: 239px;
   height: 54px;
+  border: none !important;
+}
+
+select:disabled {
+  background: #f1f4f7;
+  border-radius: 2px;
+  width: 239px;
+  height: 54px;
   border: none;
+  opacity: 1;
+  color: black;
 }
 
 .page-container {

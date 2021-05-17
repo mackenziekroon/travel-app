@@ -1,9 +1,13 @@
 // Grabs the 4 season names from the data set and puts them into an array
 let seasonNames = Object.keys(tourData.seasonCategories);
 
-// Sets search button to be initally disabled
+// Sets button and select tags to be initally disabled
 let searchBtn = document.getElementsByClassName("search-btn")[0];
 searchBtn.setAttribute("disabled", "disabled");
+let categorySelect = document.getElementsByClassName("categories-form")[0];
+categorySelect.setAttribute("disabled", "disabled");
+let destinationSelect = document.getElementsByClassName("destination-form")[0];
+destinationSelect.setAttribute("disabled", "disabled");
 
 // Loops through the array of season names
 for (let i = 0; i < seasonNames.length; i++) {
@@ -42,6 +46,9 @@ const selectSeason = () => {
   let categoryPlaceholder = document.createElement("option");
   categoryPlaceholder.selected = true;
   destinationForm.appendChild(categoryPlaceholder);
+
+  // removes disabled category select
+  categorySelect.removeAttribute("disabled", "disabled");
 
   return createCategory(categoryOptions);
 };
@@ -95,6 +102,9 @@ const selectCategory = () => {
   while (destinationForm.firstChild) {
     destinationForm.removeChild(destinationForm.firstChild);
   }
+
+  // removes disabled destination select
+  destinationSelect.removeAttribute("disabled", "disabled");
 
   return createDestinations(destinationOptions);
 };
