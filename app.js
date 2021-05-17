@@ -112,19 +112,25 @@ const selectDestination = () => {
     (destinationOptions) => destinationOptions.name === selectedDestination
   )[0];
   console.log("final destination", totalDestination);
-  return searchButton(totalDestination);
+  searchButton(totalDestination);
 };
 
 const searchButton = (destination) => {
   // Destination Images
   let destinationInfo = destination;
+  console.log("destination", destinationInfo);
   let imgNum = destinationInfo.id;
-  let relativePath = "solution/assets/8375.jpg";
+  console.log("ID: ", destinationInfo.id);
   let destinationImage = document.createElement("img");
   destinationImage.src = `solution/assets/${imgNum}.jpg`;
   destinationImage.classList = "destination-img";
   let imageContainer = document.getElementsByClassName("img-container")[0];
+  let destinationTitle = document.createElement("div");
+  let name = `${destinationInfo.name}, ${destinationInfo.country}`;
+  destinationTitle.innerText = name;
+  destinationTitle.classList = "destination-title";
   imageContainer.appendChild(destinationImage);
+  imageContainer.appendChild(destinationTitle);
 };
 
 // console.log("category", category);
