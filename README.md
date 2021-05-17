@@ -1,3 +1,5 @@
+Mackenzie Kroon - Kayak UI/Front-end intern submission
+
 ## Instructions to open
 
 npm install
