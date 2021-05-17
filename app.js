@@ -1,5 +1,3 @@
-console.log(tourData);
-
 // Grabs the 4 season names from the data set and puts them into an array
 let seasonNames = Object.keys(tourData.seasonCategories);
 
