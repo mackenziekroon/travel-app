@@ -100,6 +100,19 @@ const createDestinations = (d) => {
   }
 };
 
+const selectDestination = () => {
+  let currentDestination = document.getElementsByClassName(
+    "destination-form"
+  )[0];
+  let selectedDestination =
+    currentDestination.options[currentDestination.selectedIndex].text;
+  console.log(selectedDestination, "selected dest");
+  let destinationOptions = tourData.destinations;
+  let totalDestination = destinationOptions.filter(
+    (destinationOptions) => destinationOptions.name === selectedDestination
+  )[0];
+};
+
 // console.log("category", category);
 
 // Display all destinations that match the selected category
