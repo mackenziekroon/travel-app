@@ -1,6 +1,10 @@
 // Grabs the 4 season names from the data set and puts them into an array
 let seasonNames = Object.keys(tourData.seasonCategories);
 
+// Sets search button to be initally disabled
+let searchBtn = document.getElementsByClassName("search-btn")[0];
+searchBtn.setAttribute("disabled", "disabled");
+
 // Loops through the array of season names
 for (let i = 0; i < seasonNames.length; i++) {
   // Creates a new option element
@@ -132,7 +136,8 @@ const selectDestination = () => {
   let totalDestination = destinationOptions.filter(
     (destinationOptions) => destinationOptions.name === selectedDestination
   )[0];
-
+  let searchBtn = document.getElementsByClassName("search-btn")[0];
+  searchBtn.removeAttribute("disabled", "disabled");
   return totalDestination;
 };
 
