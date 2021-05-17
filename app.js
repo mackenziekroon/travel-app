@@ -63,7 +63,7 @@ const selectCategory = () => {
   destinationOptions = destinationOptions.filter(
     (destinationOptions) => destinationOptions.category === selectedCategory
   );
-  console.log("filtered destinations", destinationOptions);
+
   // let categoryForm = document.getElementsByClassName("categories-form")[0];
   // let singleCategory = document.getElementsByClassName("category");
   // console.log("before removing, ", singleCategory);
@@ -72,7 +72,28 @@ const selectCategory = () => {
   //   categoryForm.removeChild(categoryForm.firstChild);
   // }
 
-  // return createCategory(categoryOptions);
+  return createDestinations(destinationOptions);
+};
+
+const createDestinations = (d) => {
+  let destinations = d;
+  console.log("destinations--->", destinations);
+  for (let i = 0; i < destinations.length; i++) {
+    console.log("destinations--->", destinations[i]);
+    let destination = document.createElement("option");
+    let destinationForm = document.getElementsByClassName(
+      "destination-form"
+    )[0];
+
+    // add class name
+    destination.classList.add("destination");
+    // Display the destinations that match the selected category
+    destination.innerText =
+      destinations[i].name[0].toUpperCase() + destinations[i].name.slice(1);
+    destination.value =
+      destinations[i].name[0].toUpperCase() + destinations[i].name.slice(1);
+    destinationForm.appendChild(destination);
+  }
 };
 
 // console.log("category", category);
