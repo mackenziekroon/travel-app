@@ -19,13 +19,12 @@ for (let i = 0; i < seasonNames.length; i++) {
 const selectSeason = () => {
   let currentSeason = document.getElementsByClassName("seasons-form")[0];
   let selectedSeason = currentSeason.options[currentSeason.selectedIndex].text;
-  // console.log("selected season:", selectedSeason);
+
   selectedSeason = selectedSeason.toLowerCase();
   let categoryOptions = tourData.seasonCategories[selectedSeason];
-  // console.log("category", category);
+
   let categoryForm = document.getElementsByClassName("categories-form")[0];
-  // let singleCategory = document.getElementsByClassName("category");
-  // console.log("before removing, ", singleCategory);
+
   // remove children that were previously created
   while (categoryForm.firstChild) {
     categoryForm.removeChild(categoryForm.firstChild);
@@ -47,7 +46,7 @@ const createCategory = (e) => {
   // resestting the category placeholder
   let categoryPlaceholder = document.createElement("option");
   let categoryForm = document.getElementsByClassName("categories-form")[0];
-  console.log("place", categoryPlaceholder);
+
   categoryPlaceholder.selected = true;
   categoryPlaceholder.innerText = "Category";
   categoryPlaceholder.selectedIndex = 0;
@@ -80,7 +79,7 @@ const selectCategory = () => {
     currentCategory.options[currentCategory.selectedIndex].text;
 
   selectedCategory = selectedCategory.toLowerCase();
-  console.log("selected category:", selectedCategory);
+
   let destinationOptions = tourData.destinations;
   destinationOptions = destinationOptions.filter(
     (destinationOptions) => destinationOptions.category === selectedCategory
@@ -128,22 +127,21 @@ const selectDestination = () => {
   )[0];
   let selectedDestination =
     currentDestination.options[currentDestination.selectedIndex].text;
-  console.log(selectedDestination, "selected dest");
+
   let destinationOptions = tourData.destinations;
   let totalDestination = destinationOptions.filter(
     (destinationOptions) => destinationOptions.name === selectedDestination
   )[0];
-  console.log("final destination", totalDestination);
-  // searchButton(totalDestination);
+
   return totalDestination;
 };
 
 const searchButton = () => {
   // Destination Images
   let destinationInfo = selectDestination();
-  console.log("destination", destinationInfo);
+
   let imgNum = destinationInfo.id;
-  console.log("ID: ", destinationInfo.id);
+
   let destinationImage = document.createElement("img");
   destinationImage.src = `solution/assets/${imgNum}.jpg`;
   destinationImage.classList = "destination-img";
