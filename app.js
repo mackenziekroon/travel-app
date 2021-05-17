@@ -1,4 +1,4 @@
-// console.log(tourData);
+console.log(tourData);
 
 // Grabs the 4 season names from the data set and puts them into an array
 let seasonNames = Object.keys(tourData.seasonCategories);
@@ -34,7 +34,6 @@ const selectSeason = () => {
   }
 
   return createCategory(categoryOptions);
-  // return category;
 };
 
 const createCategory = (e) => {
@@ -51,6 +50,29 @@ const createCategory = (e) => {
     categories.value = category[i][0].toUpperCase() + category[i].slice(1);
     categoryForm.appendChild(categories);
   }
+};
+
+const selectCategory = () => {
+  let currentCategory = document.getElementsByClassName("categories-form")[0];
+  let selectedCategory =
+    currentCategory.options[currentCategory.selectedIndex].text;
+
+  selectedCategory = selectedCategory.toLowerCase();
+  console.log("selected category:", selectedCategory);
+  let destinationOptions = tourData.destinations;
+  destinationOptions = destinationOptions.filter(
+    (destinationOptions) => destinationOptions.category === selectedCategory
+  );
+  console.log("filtered destinations", destinationOptions);
+  // let categoryForm = document.getElementsByClassName("categories-form")[0];
+  // let singleCategory = document.getElementsByClassName("category");
+  // console.log("before removing, ", singleCategory);
+  // remove children that were previously created
+  // while (categoryForm.firstChild) {
+  //   categoryForm.removeChild(categoryForm.firstChild);
+  // }
+
+  // return createCategory(categoryOptions);
 };
 
 // console.log("category", category);
