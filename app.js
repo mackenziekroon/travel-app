@@ -112,12 +112,13 @@ const selectDestination = () => {
     (destinationOptions) => destinationOptions.name === selectedDestination
   )[0];
   console.log("final destination", totalDestination);
-  searchButton(totalDestination);
+  // searchButton(totalDestination);
+  return totalDestination;
 };
 
-const searchButton = (destination) => {
+const searchButton = () => {
   // Destination Images
-  let destinationInfo = destination;
+  let destinationInfo = selectDestination();
   console.log("destination", destinationInfo);
   let imgNum = destinationInfo.id;
   console.log("ID: ", destinationInfo.id);
