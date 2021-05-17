@@ -125,25 +125,14 @@ const searchButton = () => {
   destinationImage.classList = "destination-img";
   let imageContainer = document.getElementsByClassName("img-container")[0];
   let destinationTitle = document.createElement("div");
-  let name = `${destinationInfo.name}, ${destinationInfo.country}`;
+  let destinationCountry = document.createElement("div");
+  let name = `${destinationInfo.name},`;
+  let country = destinationInfo.country;
   destinationTitle.innerText = name;
   destinationTitle.classList = "destination-title";
+  destinationCountry.innerText = country;
+  destinationCountry.classList = "destination-country";
   imageContainer.appendChild(destinationImage);
   imageContainer.appendChild(destinationTitle);
+  imageContainer.appendChild(destinationCountry);
 };
-
-// console.log("category", category);
-
-// Display all destinations that match the selected category
-// let destinations = tourData.destinations;
-// let filteredDestinations = [];
-
-// for (let i = 0; i < destinations.length; i++) {
-//   let destination = destinations[i];
-//   if (destination.category === categorySelection) {
-//     filteredDestinations.push(destination);
-//   }
-// }
-
-// the filtered list of destinations
-// console.log(filteredDestinations);
