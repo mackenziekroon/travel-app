@@ -44,6 +44,7 @@ const selectSeason = () => {
 };
 
 const createCategory = (e) => {
+  // resestting the category placeholder
   let categoryPlaceholder = document.createElement("option");
   let categoryForm = document.getElementsByClassName("categories-form")[0];
   console.log("place", categoryPlaceholder);
@@ -51,6 +52,14 @@ const createCategory = (e) => {
   categoryPlaceholder.innerText = "Category";
   categoryPlaceholder.selectedIndex = 0;
   categoryForm.appendChild(categoryPlaceholder);
+
+  // resetting the destination placeholder
+  let destinationPlaceholder = document.createElement("option");
+  let destinationForm = document.getElementsByClassName("destination-form")[0];
+  destinationPlaceholder.selected = true;
+  destinationPlaceholder.innerText = "Destination";
+  destinationPlaceholder.selectedIndex = 0;
+  destinationForm.appendChild(destinationPlaceholder);
   let category = e;
   for (let i = 0; i < category.length; i++) {
     let categories = document.createElement("option");
@@ -88,8 +97,14 @@ const selectCategory = () => {
 };
 
 const createDestinations = (d) => {
+  // resetting the destination placeholder
+  let destinationPlaceholder = document.createElement("option");
+  let destinationForm = document.getElementsByClassName("destination-form")[0];
+  destinationPlaceholder.selected = true;
+  destinationPlaceholder.innerText = "Destination";
+  destinationPlaceholder.selectedIndex = 0;
+  destinationForm.appendChild(destinationPlaceholder);
   let destinations = d;
-  console.log("destinations--->", destinations);
   for (let i = 0; i < destinations.length; i++) {
     let destination = document.createElement("option");
     let destinationForm = document.getElementsByClassName(
