@@ -36,14 +36,23 @@ const selectSeason = () => {
   while (destinationForm.firstChild) {
     destinationForm.removeChild(destinationForm.firstChild);
   }
+  let categoryPlaceholder = document.createElement("option");
+  categoryPlaceholder.selected = true;
+  destinationForm.appendChild(categoryPlaceholder);
 
   return createCategory(categoryOptions);
 };
 
 const createCategory = (e) => {
+  let categoryPlaceholder = document.createElement("option");
+  let categoryForm = document.getElementsByClassName("categories-form")[0];
+  console.log("place", categoryPlaceholder);
+  categoryPlaceholder.selected = true;
+  categoryPlaceholder.innerText = "Category";
+  categoryPlaceholder.selectedIndex = 0;
+  categoryForm.appendChild(categoryPlaceholder);
   let category = e;
   for (let i = 0; i < category.length; i++) {
-    console.log("CATEGORY:", category[i]);
     let categories = document.createElement("option");
     let categoryForm = document.getElementsByClassName("categories-form")[0];
 
