@@ -32,6 +32,12 @@ const selectSeason = () => {
   while (categoryForm.firstChild) {
     categoryForm.removeChild(categoryForm.firstChild);
   }
+  let destinationForm = document.getElementsByClassName("destination-form")[0];
+
+  // remove children that were previously created
+  while (destinationForm.firstChild) {
+    destinationForm.removeChild(destinationForm.firstChild);
+  }
 
   return createCategory(categoryOptions);
 };
@@ -64,13 +70,12 @@ const selectCategory = () => {
     (destinationOptions) => destinationOptions.category === selectedCategory
   );
 
-  // let categoryForm = document.getElementsByClassName("categories-form")[0];
-  // let singleCategory = document.getElementsByClassName("category");
-  // console.log("before removing, ", singleCategory);
+  let destinationForm = document.getElementsByClassName("destination-form")[0];
+
   // remove children that were previously created
-  // while (categoryForm.firstChild) {
-  //   categoryForm.removeChild(categoryForm.firstChild);
-  // }
+  while (destinationForm.firstChild) {
+    destinationForm.removeChild(destinationForm.firstChild);
+  }
 
   return createDestinations(destinationOptions);
 };
@@ -79,7 +84,6 @@ const createDestinations = (d) => {
   let destinations = d;
   console.log("destinations--->", destinations);
   for (let i = 0; i < destinations.length; i++) {
-    console.log("destinations--->", destinations[i]);
     let destination = document.createElement("option");
     let destinationForm = document.getElementsByClassName(
       "destination-form"
