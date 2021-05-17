@@ -25,22 +25,20 @@ const selectSeason = () => {
   selectedSeason = selectedSeason.toLowerCase();
   let categoryOptions = tourData.seasonCategories[selectedSeason];
   // console.log("category", category);
-  return selectCategory(categoryOptions);
+  let categoryForm = document.getElementsByClassName("categories-form")[0];
+  // let singleCategory = document.getElementsByClassName("category");
+  // console.log("before removing, ", singleCategory);
+  // remove children that were previously created
+  while (categoryForm.firstChild) {
+    categoryForm.removeChild(categoryForm.firstChild);
+  }
+
+  return createCategory(categoryOptions);
   // return category;
 };
 
-const selectCategory = (e) => {
+const createCategory = (e) => {
   let category = e;
-  let categoryForm = document.getElementsByClassName("categories-form")[0];
-  let singleCategory = document.getElementsByClassName("category");
-  console.log("single category", singleCategory);
-  // remove children that were previously created
-  if (singleCategory.length) {
-    for (let i = 0; i < singleCategory.length; i++) {
-      categoryForm.removeChild(singleCategory[i]);
-    }
-  }
-
   for (let i = 0; i < category.length; i++) {
     console.log("CATEGORY:", category[i]);
     let categories = document.createElement("option");
@@ -58,15 +56,15 @@ const selectCategory = (e) => {
 // console.log("category", category);
 
 // Display all destinations that match the selected category
-let destinations = tourData.destinations;
-let filteredDestinations = [];
+// let destinations = tourData.destinations;
+// let filteredDestinations = [];
 
-for (let i = 0; i < destinations.length; i++) {
-  let destination = destinations[i];
-  if (destination.category === categorySelection) {
-    filteredDestinations.push(destination);
-  }
-}
+// for (let i = 0; i < destinations.length; i++) {
+//   let destination = destinations[i];
+//   if (destination.category === categorySelection) {
+//     filteredDestinations.push(destination);
+//   }
+// }
 
 // the filtered list of destinations
 // console.log(filteredDestinations);
