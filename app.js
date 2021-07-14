@@ -37,6 +37,7 @@ const selectSeason = () => {
   while (categoryForm.firstChild) {
     categoryForm.removeChild(categoryForm.firstChild);
   }
+
   let destinationForm = document.getElementsByClassName("destination-form")[0];
 
   // remove children that were previously created
@@ -169,6 +170,12 @@ const searchButton = () => {
   destinationTitle.classList = "destination-title";
   destinationCountry.innerText = country;
   destinationCountry.classList = "destination-country";
+
+  // remove images & destination details that were previously created
+  while (imageContainer.firstChild) {
+    imageContainer.removeChild(imageContainer.firstChild);
+  }
+
   imageContainer.appendChild(destinationImage);
   imageContainer.appendChild(destinationTitle);
   imageContainer.appendChild(destinationCountry);

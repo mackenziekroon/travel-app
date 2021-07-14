@@ -199,9 +199,20 @@ select {
   color: white;
 } */
 
+.img-container {
+  /* width: 782px;
+  height: 431px; */
+  flex-direction: column;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
 .destination-img {
   width: 782px;
   height: 431px;
+  /* object-fit: fill; */
   /* position: absolute;
   top: 242px;
   left: 220px; */
@@ -214,9 +225,9 @@ select {
   color: #ffffff;
   text-align: left;
   line-height: 20px;
-  position: absolute;
-  top: 609px;
-  left: 251px;
+  /* position: absolute; */
+  /* top: 609px;
+  left: 251px; */
   width: 347px;
   height: 40px;
 }
@@ -228,9 +239,9 @@ select {
   color: #ffffff;
   text-align: left;
   line-height: 20px;
-  position: absolute;
+  /* position: absolute;
   top: 630px;
-  left: 251px;
+  left: 251px; */
   width: 347px;
   height: 40px;
 }
