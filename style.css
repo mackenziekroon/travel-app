@@ -73,27 +73,31 @@ select:disabled {
   text-align: left;
   line-height: 56px;
   /* position: absolute; */
-  margin-top: 10%;
+  margin-top: 7%;
 }
 
-/* .form-container {
+.form-container {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  background-color: lightblue;
-  top: 181px;
-  left: 200px;
-  right: 438px;
-} */
+  align-items: center;
+  justify-content: space-between;
+  /* position: absolute; */
+  /* background-color: lightblue; */
+  /* top: 181px; */
+  margin-top: 2%;
+  width: 782px;
+  height: 60px;
+}
 
 .season-form {
   background: #f1f4f7;
   border-radius: 2px;
-  position: absolute;
+  /* position: absolute; */
   height: 54px;
   width: 239px;
-  top: 181px;
-  left: 220px;
+  /* margin: 0 10px 0 5px; */
+  /* top: 181px;
+  left: 220px; */
 }
 
 .season-text {
@@ -117,10 +121,6 @@ select {
   z-index: 1;
 }
 
-option {
-  background-color: lightcoral !important;
-}
-
 #season-select {
   /* /* position: absolute; */
   top: 181px;
@@ -136,11 +136,12 @@ option {
   text-align: left;
   background: #f1f4f7;
   border-radius: 2px;
-  position: absolute;
+  /* position: absolute; */
   height: 54px;
   width: 239px;
-  top: 181px;
-  left: 463px;
+  /* margin: 0 5px 0 5px; */
+  /* top: 181px;
+  left: 463px; */
 }
 
 .category-text {
@@ -155,18 +156,20 @@ option {
   left: 475px;
 }
 
-.destination-form {
+.destination-form,
+.destinations-form {
   font-family: HelveticaNeue;
   font-size: 14px;
   color: #131a1f;
   text-align: left;
   background: #f1f4f7;
   border-radius: 2px;
-  position: absolute;
+  /* position: absolute; */
   height: 54px;
   width: 239px;
-  top: 181px;
-  left: 705px;
+  /* top: 181px;
+  left: 705px; */
+  /* margin: 0 5px 0 10px; */
 }
 
 .destination-text {
@@ -186,9 +189,10 @@ option {
   border-radius: 2px;
   width: 54px;
   height: 54px;
-  position: absolute;
+  /* position: absolute;
   top: 181px;
-  left: 948px;
+  left: 948px; */
+  /* margin: 0 5px 0 10px; */
 }
 
 /* .search-btn {
@@ -198,9 +202,9 @@ option {
 .destination-img {
   width: 782px;
   height: 431px;
-  position: absolute;
+  /* position: absolute;
   top: 242px;
-  left: 220px;
+  left: 220px; */
 }
 
 .destination-title {

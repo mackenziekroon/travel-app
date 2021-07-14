@@ -10,22 +10,17 @@
   <body>
     <div class="page-container">
       <div class="navbar-container">
-        <div class="travel-logo">
-          Trip Planner
-        </div>
-
+        <div class="travel-logo">Trip Planner</div>
       </div>
-      <div class="lower-container">
-        <div class="heading">All the best tours, all in one place.</div>
-        <!-- <div class="form-container"> -->
+      <!-- <div class="lower-container"> -->
+      <div class="heading">Find your perfect vacation</div>
+      <div class="form-container">
         <div class="season-form">
           <!-- <button class="season-text">Season</button> -->
           <form id="seasons-names">
-
             <select onchange="selectSeason()" class="seasons-form">
               <option selected>Season</option>
             </select>
-
           </form>
         </div>
 
@@ -36,23 +31,21 @@
         </div>
         <!-- <div class="category-text">Category</div> -->
         <div class="destinations-form">
-          <select
-            onchange="selectDestination()"
-            class="destination-form"
-          >
-          <option selected>Destination</option>
-        </select>
+          <select onchange="selectDestination()" class="destination-form">
+            <option selected>Destination</option>
+          </select>
         </div>
         <div class="destination-text">Destination</div>
         <div class="btn-container">
-          <div>
-            <input type='image' src='solution/assets/search-icon.svg'class="search-btn" onclick="searchButton()">
-              <!-- <img src="solution/assets/search-icon.svg" alt="search-button" /> -->
-          </input>
-          </div>
+          <input
+            type="image"
+            src="solution/assets/search-icon.svg"
+            class="search-btn"
+            onclick="searchButton()"
+          />
         </div>
-        <div class="img-container"></div>
       </div>
+      <div class="img-container"></div>
     </div>
 
     <script type="text/javascript" src="solution/assets/tour-data.js"></script>
