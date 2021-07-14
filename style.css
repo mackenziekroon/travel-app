@@ -37,7 +37,7 @@ select:disabled {
 }
 
 .navbar-container {
-  background-image: linear-gradient(-135deg, #ffc2b4 0%, #fb8f67 100%);
+  background-image: linear-gradient(-135deg, #008dd5 0%, #ade4ff 100%);
   width: 1440px;
   height: 45px;
   position: fixed;
@@ -73,7 +73,7 @@ select:disabled {
   text-align: left;
   line-height: 56px;
   /* position: absolute; */
-  margin-top: 7%;
+  margin-top: 5%;
 }
 
 .form-container {
@@ -185,7 +185,7 @@ select {
 }
 
 .btn-container {
-  background-image: linear-gradient(-135deg, #fb8f67 0%, #fb8f67 100%);
+  background-image: linear-gradient(-135deg, #008dd5 0%, #ade4ff 100%);
   border-radius: 2px;
   width: 54px;
   height: 54px;
