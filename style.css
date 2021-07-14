@@ -202,16 +202,18 @@ select {
 .img-container {
   /* width: 782px;
   height: 431px; */
-  flex-direction: column;
+  /* flex-direction: column;
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: center; */
+  position: relative;
   margin-top: 25px;
 }
 
 .destination-img {
   width: 782px;
   height: 431px;
+  z-index: 1;
   /* object-fit: fill; */
   /* position: absolute;
   top: 242px;
@@ -225,11 +227,12 @@ select {
   color: #ffffff;
   text-align: left;
   line-height: 20px;
-  /* position: absolute; */
-  /* top: 609px;
-  left: 251px; */
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
   width: 347px;
   height: 40px;
+  z-index: 1;
 }
 
 .destination-country {
@@ -239,9 +242,10 @@ select {
   color: #ffffff;
   text-align: left;
   line-height: 20px;
-  /* position: absolute;
-  top: 630px;
-  left: 251px; */
+  position: absolute;
+  bottom: 0px;
+  left: 16px;
+
   width: 347px;
   height: 40px;
 }
