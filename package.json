@@ -1,10 +1,13 @@
 {
-  "name": "cambridge-ui-intern-project-2021",
+  "homepage": "https://mackenziekroon.github.io/travel-app/",
+  "name": "travel-app",
   "version": "1.0.0",
   "description": "Create a page that allows users to select a destination from a form. Selectable destinations are filtered from a list of categories based on the season chosen by the user. Once selected, the destination is displayed below the form.",
   "main": "app.js",
   "scripts": {
     "open-html": "open index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,8 +19,10 @@
   "bugs": {
     "url": "https://github.com/mackenziekroon/kayak/issues"
   },
-  "homepage": "https://github.com/mackenziekroon/kayak#readme",
   "dependencies": {
     "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
