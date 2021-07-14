@@ -41,8 +41,11 @@ select:disabled {
   align-items: center;
 }
 
-.kayak-logo {
+.travel-logo {
+  font-family: HelveticaNeue-Bold;
   position: absolute;
+  color: white;
+  font: 50px;
   left: 220px;
   top: 11px;
 }
